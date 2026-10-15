@@ -9,6 +9,9 @@ import ForgetPassword from './src/components/ForgetPassword';
 import OTPScreen from './src/components/OTPScreen';
 import ResetPasswordScreen from './src/components/ResetPasswordScreen';
 import SelectCityScreen from './src/components/SelectCityScreen';
+import HomeScreen from './src/components/HomeScreen';
+import PlacesScreen from './src/components/PlacesScreen';
+import PlaceDetailsScreen from './src/components/PlaceDetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -51,6 +54,21 @@ export default function App() {
           name="SelectCity"
           component={SelectCityScreen}
         />
+
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+         />
+
+         <Stack.Screen
+          name="Places"
+          component={PlacesScreen}
+        />
+
+        <Stack.Screen
+         name="PlaceDetails"
+         component={PlaceDetailsScreen}
+         />
 
       </Stack.Navigator>
     </NavigationContainer>

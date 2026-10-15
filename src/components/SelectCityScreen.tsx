@@ -52,10 +52,15 @@ export default function SelectCityScreen({ navigation }: Props) {
   };
 
   const handleContinue = () => {
-    if (selectedCity) {
-      console.log('Выбранный город:', selectedCity);
-    }
-  };
+     if (!selectedCity) {
+    return;
+  }
+
+  navigation.replace('Home', {
+    city: selectedCity,
+  });
+};
+
 
   return (
     <SafeAreaView style={styles.safeArea}>
